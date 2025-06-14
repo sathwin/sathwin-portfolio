@@ -16,50 +16,50 @@ function Timeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
+            date="Dec 2024 - Present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
+            <h3 className="vertical-timeline-element-title">Software Development Engineer Intern</h3>
+            <h4 className="vertical-timeline-element-subtitle">VariableAI, Phoenix, AZ</h4>
             <p>
-              Full-stack Web Development, GenAI/LLM, Project Management, Business Development
+              Multi-tenant API Gateway Development, Real-time Monitoring Dashboards, Event-driven Microservices Architecture
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2022"
+            date="Aug 2024 - May 2025"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Software Development Engineer Intern</h3>
+            <h4 className="vertical-timeline-element-subtitle">AI Quotient, Inc</h4>
             <p>
-              Frontend Development, Backend Development, User Experience, Team Leading
+              Clickstream Analytics Pipeline, React Dashboard Optimization, Visual Regression Testing
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2021 - 2021"
+            date="Jan 2023 - May 2025"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Staff Engineer Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Undergraduate Teaching Assistant</h3>
+            <h4 className="vertical-timeline-element-subtitle">Arizona State University, Tempe, AZ</h4>
             <p>
-              Full-stack Development, API Development, User Experience
+              Programming Instruction (Java, Python), Student Mentoring, Learning Resource Development
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2020"
+            date="Jan 2023 - May 2025"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
+            <h3 className="vertical-timeline-element-title">Student Representative</h3>
+            <h4 className="vertical-timeline-element-subtitle">Fulton Academic Integrity Matters, ASU</h4>
             <p>
-              Automation, Data Governance, Statistical Analysis
+              Academic Integrity Case Review, Policy Application, Faculty Collaboration
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
