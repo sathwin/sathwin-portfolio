@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { Analytics } from "@vercel/analytics/react";
 import {
   Main,
   Timeline,
@@ -37,6 +38,7 @@ function App() {
             <Contact/>
         </FadeIn>
         <Footer />
+        <Analytics />
     </div>
     );
 }
