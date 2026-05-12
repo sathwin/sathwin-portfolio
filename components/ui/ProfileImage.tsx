@@ -17,21 +17,33 @@ export default function ProfileImage({ src = "/profile.jpg", alt, size = 200 }: 
       className="relative group"
       style={{ width: size, height: size }}
     >
-      {/* Animated gradient border */}
-      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-blue via-accent-teal to-accent-amber opacity-75 blur-lg group-hover:opacity-100 transition-opacity duration-500" />
-      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-blue via-accent-teal to-accent-amber animate-spin-slow opacity-70"
-           style={{ animationDuration: '8s' }} />
+      {/* Animated gradient border - using filter drop-shadow for better circular shape */}
+      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-blue via-accent-teal to-accent-amber animate-spin-slow opacity-70 group-hover:opacity-100 transition-opacity duration-500"
+           style={{
+             animationDuration: '8s',
+             filter: 'blur(12px)'
+           }}
+      />
 
-      {/* Image container */}
-      <div className="relative rounded-full overflow-hidden border-[3px] border-surface bg-surface shadow-2xl shadow-accent-blue/20"
-           style={{ width: size, height: size }}>
+      {/* Image container with modern CSS best practices */}
+      <div
+        className="relative rounded-full overflow-hidden border-[3px] border-surface bg-surface"
+        style={{
+          width: size,
+          height: size,
+          aspectRatio: '1/1',
+          filter: 'drop-shadow(0 20px 40px rgba(91, 140, 255, 0.25))'
+        }}
+      >
         {src ? (
           <img
             src={src}
             alt={alt}
-            className="w-full h-full object-cover object-[center_20%] scale-125 brightness-105 contrast-110 group-hover:scale-[1.35] transition-all duration-500"
+            className="w-full h-full transition-all duration-500 group-hover:scale-105"
             style={{
-              filter: 'brightness(1.05) contrast(1.1) saturate(1.1)',
+              objectFit: 'cover',
+              objectPosition: 'center 35%',
+              filter: 'brightness(1.02) contrast(1.05) saturate(1.05)',
             }}
           />
         ) : (
@@ -44,8 +56,14 @@ export default function ProfileImage({ src = "/profile.jpg", alt, size = 200 }: 
         )}
       </div>
 
-      {/* Enhanced glow effect */}
-      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-blue/30 via-accent-teal/30 to-accent-amber/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl scale-110" />
+      {/* Enhanced glow effect on hover */}
+      <div
+        className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        style={{
+          filter: 'blur(30px)',
+          background: 'radial-gradient(circle, rgba(91, 140, 255, 0.4) 0%, rgba(78, 203, 160, 0.3) 50%, rgba(239, 159, 39, 0.3) 100%)',
+        }}
+      />
     </motion.div>
   );
 }
