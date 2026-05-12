@@ -84,8 +84,8 @@ export const pillars = [
 
 // Hero stats
 export const heroStats = [
-  { value: "5", label: "prod systems" },
-  { value: "8+", label: "AWS services" },
+  { value: "6", label: "prod systems" },
+  { value: "10+", label: "AWS services" },
   { value: "<1¢", label: "pdf/page cost", isStatic: true },
   { value: "4.0", label: "GPA · M.S." },
 ];
@@ -157,6 +157,30 @@ export const projects: Project[] = [
     desc: "PHI-compliant medical chatbot with real-time token streaming via WebSocket. FastAPI backend on ECS Fargate connected to AWS Bedrock for LLM inference. PDF accessibility pipeline rebuilt serverless with native C++ parser, reducing costs from $3 to under a penny per page.",
     github: "https://github.com/sathwin/mediquery-ai",
     image: "/projects/mediquery.png",
+  },
+  {
+    name: "ChainSwap DEX",
+    tags: [
+      { label: "Solidity · Web3", color: "blue" },
+      { label: "React · TypeScript", color: "blue" },
+    ],
+    infra: "Hardhat · Ethereum · AMM Protocol · Liquidity Pools · Smart Contracts",
+    metric: "AMM protocol · swap routing · slippage protection",
+    desc: "Decentralized exchange protocol implementing automated market maker (AMM) with constant product formula. Built TypeScript/React frontend for wallet connection and swap execution. Deployed and tested on Hardhat network with comprehensive unit tests covering edge cases including slippage, price impact, and reentrancy protection.",
+    github: "https://github.com/sathwin/chainswap",
+    image: "/projects/chainswap.png",
+  },
+  {
+    name: "BookTrack Library",
+    tags: [
+      { label: "React · Node.js", color: "blue" },
+      { label: "PostgreSQL", color: "gray" },
+    ],
+    infra: "JWT Authentication · REST API · Advanced Search · Database Optimization",
+    metric: "35% faster retrieval · 25% query optimization",
+    desc: "Full-stack library management system with React frontend and Node.js backend. Implemented advanced search and filtering improving retrieval efficiency by 35%. Optimized database schemas reducing query response time by 25%. Integrated JWT authentication for secure user management.",
+    github: "https://github.com/sathwin/booktrack",
+    image: "/projects/booktrack.png",
   },
 ];
 
@@ -276,30 +300,55 @@ export const awards: Award[] = [
   {
     icon: "school",
     title: "Teaching Excellence",
-    desc: "ASU GSG Teaching Excellence Award (Spring 2026) + Fulton Outstanding UGTA Award (2023–2024). TA for FSE 100 — 200+ students.",
-    metric: "200+ students mentored",
+    desc: "ASU GSG Teaching Excellence Award (Spring 2026) + Fulton Outstanding UGTA Award (2023–2024). TA supporting 120+ students per semester across Python, Java, C++, MATLAB, and data structures courses.",
+    metric: "240+ students mentored",
     color: "teal",
+  },
+  {
+    icon: "award",
+    title: "SUN Award",
+    desc: "ASU SUN (Serving University Needs) Award for exemplary service and dedication to the School of Molecular Sciences, recognized for commitment to assisting colleagues during times of need.",
+    metric: "Nov 2024 · ASU Recognition",
+    color: "teal",
+  },
+  {
+    icon: "code",
+    title: "Full-Stack Developer Certification",
+    desc: "ASU/AZNext Full-Stack Developer Certification with Cognizant covering React, Node.js, and modern web development practices",
+    metric: "Sep 2025 · Cognizant",
+    color: "blue",
   },
 ];
 
 // Experience timeline
 export const experience: Experience[] = [
   {
-    year: "Jun 2025 – Apr 2026",
+    year: "Jun 2025 – May 2026",
     company: "VariableAI",
-    role: "SWE Intern",
+    role: "Software Engineer Intern",
     bullets: [
-      "End-to-end: React + TypeScript analytics dashboard, FastAPI backend, LangChain + OpenRouter LLM pipeline. System absorbed second enterprise client volume with zero code changes — 60% manual review reduction.",
-      "Diagnosed slow brand-lookup queries; added PostgreSQL index coverage + Redis caching. Response time: ~2s → <500ms.",
+      "Built LLM document extraction pipeline processing thousands of documents monthly for 2 enterprise clients. Designed automated validation system reducing manual review by 60%+, enabling team to scale without additional headcount.",
+      "Implemented AI-driven RAG search using LangChain and vector embeddings, enabling natural language queries and context-aware responses over extracted document corpus.",
+      "Developed full-stack analytics dashboard (React + TypeScript, Node.js/Express). Improved query performance through PostgreSQL indexing and Redis caching, bringing response times under 500ms.",
+    ],
+  },
+  {
+    year: "Aug 2025 – May 2026",
+    company: "Claude Builder Club @ ASU",
+    role: "Head of Operations / Technology",
+    bullets: [
+      "Leading operations and technology initiatives for ASU's official Claude AI builder community, organizing workshops and hackathons.",
+      "Coordinating technical projects and fostering collaboration among students building AI-powered applications.",
     ],
   },
   {
     year: "Aug 2024 – May 2025",
     company: "AI Quotient",
-    role: "SWE Intern",
+    role: "Software Engineer Intern",
     bullets: [
-      "Full stack for BERT ticket routing: FastAPI inference on EC2, Redis caching, React + TypeScript ops dashboard. Routing accuracy: 68% → 80%+.",
-      "Python ETL pipeline with C++ preprocessing → PostgreSQL on RDS. CloudWatch caught 2 upstream schema changes pre-corruption.",
+      "Built ML ticket classification service using FastAPI and BERT, improving routing accuracy from 68% to 80%+. Deployed on EC2 with Redis caching and React + TypeScript dashboard for real-time monitoring.",
+      "Designed automated ETL pipeline combining Python orchestration with C++ components for data-intensive transformations. Integrated S3, RDS PostgreSQL, and Lambda with CloudWatch monitoring for weekly retraining cycles.",
+      "Containerized analytics application with Docker and deployed to ECS. Built Flask API with Chart.js visualizations to surface model performance metrics.",
     ],
   },
   {
@@ -307,8 +356,28 @@ export const experience: Experience[] = [
     company: "ASU AI Cloud Innovation Center",
     role: "Cloud Developer Intern",
     bullets: [
-      "PHI-compliant medical chatbot: React + WebSocket streaming, FastAPI on ECS Fargate, Bedrock LLM, Cognito auth.",
-      "PDF pipeline: $3/page → <$0.01 via serverless Lambda + native C++ parser. WCAG 2.1 compliant.",
+      "Built PHI-compliant medical chatbot with React + TypeScript frontend and FastAPI backend on ECS Fargate, connecting to AWS Bedrock for LLM inference with WebSocket streaming for real-time token delivery.",
+      "Cut document processing costs from $3/page to under $0.01 by rearchitecting PDF accessibility pipeline into serverless Lambda workflow with native C++ parsing library while maintaining WCAG 2.1 compliance.",
+      "Owned CloudFormation infrastructure-as-code across three AWS accounts and instrumented system with X-Ray distributed tracing end-to-end for rapid debugging.",
+    ],
+  },
+  {
+    year: "Aug 2024 – Apr 2026",
+    company: "ASU Fulton Academic Integrity Matters",
+    role: "Student Representative",
+    bullets: [
+      "Served on academic integrity appeal hearing boards, reviewing real cases and contributing to fair, policy-aligned outcomes alongside Academic Integrity Officers.",
+      "Participated in formal hearings where student sanctions were reviewed, providing student perspective to process with serious academic consequences.",
+    ],
+  },
+  {
+    year: "Jan 2023 – May 2026",
+    company: "Arizona State University",
+    role: "Teaching Assistant",
+    bullets: [
+      "Supporting 120+ students per semester across Python, Java, C++, MATLAB, and data structures courses through weekly lab sessions and office hours.",
+      "Led lab sessions and ran classes independently when professors unavailable. Provided detailed feedback on assignments and conducted one-on-one mentoring.",
+      "Recognized with Fulton Outstanding UGTA Award (2023-2024) and GSG Teaching Excellence Award (Spring 2026) for going above and beyond role responsibilities.",
     ],
   },
 ];
