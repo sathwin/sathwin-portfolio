@@ -14,36 +14,27 @@ export default function ProfileImage({ src = "/profile.jpg", alt, size = 200 }: 
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="relative group"
+      className="relative flex-shrink-0"
       style={{ width: size, height: size }}
     >
-      {/* Animated gradient border - using filter drop-shadow for better circular shape */}
-      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-blue via-accent-teal to-accent-amber animate-spin-slow opacity-70 group-hover:opacity-100 transition-opacity duration-500"
-           style={{
-             animationDuration: '8s',
-             filter: 'blur(12px)'
-           }}
-      />
-
-      {/* Image container with modern CSS best practices */}
+      {/* Image container - clean, minimal style */}
       <div
-        className="relative rounded-full overflow-hidden border-[3px] border-surface bg-surface"
+        className="relative rounded-full overflow-hidden border-2 border-border bg-surface shadow-lg shadow-black/20"
         style={{
           width: size,
           height: size,
           aspectRatio: '1/1',
-          filter: 'drop-shadow(0 20px 40px rgba(91, 140, 255, 0.25))'
         }}
       >
         {src ? (
           <img
             src={src}
             alt={alt}
-            className="w-full h-full transition-all duration-500 group-hover:scale-105"
+            className="w-full h-full transition-all duration-300 hover:scale-105"
             style={{
               objectFit: 'cover',
-              objectPosition: 'center 35%',
-              filter: 'brightness(1.02) contrast(1.05) saturate(1.05)',
+              objectPosition: 'center 25%',
+              filter: 'brightness(1.02) contrast(1.03) saturate(1.02)',
             }}
           />
         ) : (
@@ -55,15 +46,6 @@ export default function ProfileImage({ src = "/profile.jpg", alt, size = 200 }: 
           </div>
         )}
       </div>
-
-      {/* Enhanced glow effect on hover */}
-      <div
-        className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-        style={{
-          filter: 'blur(30px)',
-          background: 'radial-gradient(circle, rgba(91, 140, 255, 0.4) 0%, rgba(78, 203, 160, 0.3) 50%, rgba(239, 159, 39, 0.3) 100%)',
-        }}
-      />
     </motion.div>
   );
 }

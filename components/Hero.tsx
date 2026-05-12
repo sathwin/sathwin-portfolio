@@ -20,27 +20,27 @@ export default function Hero() {
           {/* Left column */}
           <div className="flex flex-col justify-center gap-8">
             {/* Profile Image + Name Section */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+            <div className="flex flex-col sm:flex-row items-center gap-6">
               <ProfileImage
                 src="/profile.jpg"
                 alt={personalInfo.name}
                 size={140}
               />
-              <div className="flex-1 text-center sm:text-left">
-                {/* Eyebrow */}
-                <SectionLabel>system specification · engineer profile</SectionLabel>
-
+              <div className="flex-1 text-center sm:text-left flex flex-col justify-center">
                 {/* Name */}
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-text-primary tracking-tighter leading-tight mt-2">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-text-primary tracking-tighter leading-tight">
                   {personalInfo.name}
                 </h1>
 
                 {/* TypeWriter role */}
-                <div className="h-8 mt-4">
+                <div className="h-8 mt-3">
                   <TypeWriter strings={typewriterRoles} />
                 </div>
               </div>
             </div>
+
+            {/* Eyebrow moved below profile/name section */}
+            <SectionLabel>system specification · engineer profile</SectionLabel>
 
             {/* Three pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
