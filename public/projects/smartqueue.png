@@ -1,0 +1,42 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="smartqueue-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2332;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#080E1A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#smartqueue-bg)"/>
+
+  <!-- Queue visualization -->
+  <g transform="translate(150, 140)">
+    <!-- Queue boxes -->
+    <rect x="0" y="0" width="80" height="80" rx="8" fill="#1a2332" stroke="#4ECBA0" stroke-width="2"/>
+    <rect x="120" y="0" width="80" height="80" rx="8" fill="#1a2332" stroke="#4ECBA0" stroke-width="2"/>
+    <rect x="240" y="0" width="80" height="80" rx="8" fill="#1a2332" stroke="#4ECBA0" stroke-width="2"/>
+    <rect x="360" y="0" width="80" height="80" rx="8" fill="#1a2332" stroke="#4ECBA0" stroke-width="2"/>
+    <rect x="480" y="0" width="80" height="80" rx="8" fill="#1a2332" stroke="#5B8CFF" stroke-width="2" opacity="0.5"/>
+
+    <!-- Arrows -->
+    <path d="M 85 40 L 110 40" stroke="#4ECBA0" stroke-width="2" fill="none"/>
+    <polygon points="110,40 105,36 105,44" fill="#4ECBA0"/>
+    <path d="M 205 40 L 230 40" stroke="#4ECBA0" stroke-width="2" fill="none"/>
+    <polygon points="230,40 225,36 225,44" fill="#4ECBA0"/>
+    <path d="M 325 40 L 350 40" stroke="#4ECBA0" stroke-width="2" fill="none"/>
+    <polygon points="350,40 345,36 345,44" fill="#4ECBA0"/>
+    <path d="M 445 40 L 470 40" stroke="#5B8CFF" stroke-width="2" fill="none" opacity="0.5"/>
+    <polygon points="470,40 465,36 465,44" fill="#5B8CFF" opacity="0.5"/>
+  </g>
+
+  <!-- ECS Worker -->
+  <g transform="translate(300, 260)">
+    <rect x="0" y="0" width="200" height="60" rx="8" fill="#1a2332" stroke="#5B8CFF" stroke-width="2"/>
+    <circle cx="30" cy="30" r="8" fill="#4ECBA0"/>
+    <text x="100" y="38" font-family="Arial, sans-serif" font-size="18" fill="#5B8CFF" text-anchor="middle">C++ Worker</text>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#EEF4FF" text-anchor="middle">SmartQueue</text>
+  <text x="400" y="390" font-family="Arial, sans-serif" font-size="16" fill="#4ECBA0" text-anchor="middle">ECS · Redis · CloudWatch Auto-scaling</text>
+</svg>
