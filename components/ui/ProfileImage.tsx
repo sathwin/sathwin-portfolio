@@ -34,7 +34,7 @@ export default function ProfileImage({ src = "/profile.jpg", alt, size = 200 }: 
             style={{
               objectFit: 'cover',
               objectPosition: 'center 15%',
-              filter: 'brightness(1.01) contrast(1.02)',
+              filter: 'brightness(1.08) contrast(1.15) saturate(1.1) sepia(0.05)',
             }}
           />
         ) : (

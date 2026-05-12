@@ -20,20 +20,22 @@ export default function Hero() {
           {/* Left column */}
           <div className="flex flex-col justify-center gap-8">
             {/* Profile Image + Name Section */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6">
-              <ProfileImage
-                src="/profile.jpg"
-                alt={personalInfo.name}
-                size={130}
-              />
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <div className="-mt-2">
+                <ProfileImage
+                  src="/profile.jpg"
+                  alt={personalInfo.name}
+                  size={160}
+                />
+              </div>
               <div className="flex-1 text-center sm:text-left">
                 {/* Name */}
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-text-primary tracking-tighter leading-[1.1]">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-text-primary tracking-tighter leading-[1.15] mt-2">
                   {personalInfo.name}
                 </h1>
 
                 {/* TypeWriter role */}
-                <div className="mt-2">
+                <div className="mt-3">
                   <TypeWriter strings={typewriterRoles} />
                 </div>
               </div>
