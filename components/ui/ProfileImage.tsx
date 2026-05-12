@@ -19,7 +19,7 @@ export default function ProfileImage({ src = "/profile.jpg", alt, size = 200 }: 
     >
       {/* Image container - clean, minimal style */}
       <div
-        className="relative rounded-full overflow-hidden border-2 border-border bg-surface shadow-lg shadow-black/20"
+        className="relative rounded-full overflow-hidden border border-border bg-surface shadow-md shadow-black/10"
         style={{
           width: size,
           height: size,
@@ -30,11 +30,11 @@ export default function ProfileImage({ src = "/profile.jpg", alt, size = 200 }: 
           <img
             src={src}
             alt={alt}
-            className="w-full h-full transition-all duration-300 hover:scale-105"
+            className="w-full h-full transition-all duration-300 hover:scale-[1.02]"
             style={{
               objectFit: 'cover',
-              objectPosition: 'center 25%',
-              filter: 'brightness(1.02) contrast(1.03) saturate(1.02)',
+              objectPosition: 'center 15%',
+              filter: 'brightness(1.01) contrast(1.02)',
             }}
           />
         ) : (
