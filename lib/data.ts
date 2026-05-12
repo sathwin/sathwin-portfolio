@@ -316,7 +316,7 @@ export const awards: Award[] = [
     title: "Full-Stack Developer Certification",
     desc: "ASU/AZNext Full-Stack Developer Certification with Cognizant covering React, Node.js, and modern web development practices",
     metric: "Sep 2025 · Cognizant",
-    color: "blue",
+    color: "teal",
   },
 ];
 
